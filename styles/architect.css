@@ -8,6 +8,9 @@
 .display-flex{
     display: flex;
 }
+.text-primary{
+    color: rgb(255, 144, 14);
+}
 /* dark-01 */
 .text-black{
     color: rgba(19, 19, 19, 1);
@@ -24,11 +27,33 @@
 .bg-light{
     background-color: rgba(255, 144, 14, 0.1);
 }
+.btn-primary{
+    background-color: rgba(255, 144, 14, 1);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 3rem;
+    border: none;
+    border-radius: 8px;
+    padding: 21px 24px 20px 25px;
+}
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section {
+    margin-top: 130px;
+}
 /* header styles */
 
  /* navbar related styles */
  .navbar{
     justify-content: space-between;
+    align-items: center;
+ }
+ .brand{
+    font-size: 2.81rem;
+    font-weight: 700px;
  }
  .nav-links{
  }
@@ -44,4 +69,67 @@
  .navbar, .banner{
     max-width: 1440px;
     margin: 0 auto;
+ }
+ /* banner related styles */
+ .banner-content{
+    width: 862px;
+    margin: 0 auto;
+    text-align: center;
+ }
+ .banner-title{
+    font-size: 4rem;
+    font-weight: 700;
+ }
+ .banner-image{
+    width: 100%;
+ }
+ .banner-description{
+    font-size: 1rem;
+    font-weight: 400;
+ }
+ /* team and feature related styles */
+.teams{
+    align-items: center;
+}
+.team-image-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    gap top: 85px;
+}
+.our-features{
+    margin-left: 130px;
+    height: 304px;
+    max-width: 537px;
+}
+.section-title{
+    font-size: 2.81rem;
+    font-weight: 700;
+}
+#quick-list{
+    font-weight: 500;
+}
+ /* responsive-media-query */
+ @media screen and (max-width:576px) {
+    .navbar,
+    .nav-links,
+    .teams
+     {
+        flex-direction: column;
+    }
+    .team-image-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .our-features{
+        margin: auto;
+    }
+ }
+ /* for tablet device */
+ @media screen and (min-width:576px) and (max-width:992px) {
+    .teams{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 50px auto;
+    }
  }
